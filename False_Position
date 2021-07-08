@@ -1,0 +1,47 @@
+function [root, fx, ea, iter] = falsePosition(func, xl, xu, es, maxit, varargin)
+%falsePosition finds the root of a function using false position method
+if nargin >= 3
+    root = 1;
+    if nargin == 3 
+        es = 0.0001;
+        maxit = 50;
+    else if nargin == 4 
+        maxit = 50; 
+    end
+    end
+
+    if ~isempty(varargin) 
+      f = @(x) func(x,varargin{:});
+    else 
+        f = @(x) func(x); 
+    end
+    iter = 0;
+
+    while iter < maxit
+
+    root = (xl*f(xu)-xu*f(xl)) / (f(xu)-f(xl));
+    iter = iter + 1; 
+  
+
+    if f(xl)*f(root) < 0   
+        xu = root;
+    else
+        xl = root;
+    end
+  
+    if iter > 1
+        ea = abs((root-root_old)/root)*100; 
+        if ea < es 
+            break 
+        end
+    end
+  
+    root_old = root; 
+end
+
+fx = f(root);end
+if nargin < 3
+    error('Incorrect input')
+end
+
+end
