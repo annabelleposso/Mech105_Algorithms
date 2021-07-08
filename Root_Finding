@@ -1,0 +1,30 @@
+% Define problem constants
+g = 9.81;
+mu = 0.55;
+F = 150;
+m = 25;
+
+% Define the function to be solved for. Is the angle specified in radians or degrees?
+
+% THINK, what makes range sense for angle?
+
+% Plot your function. Does plotting give you an idea about where the root is?
+
+% Finaly solve for the root using the bisection script given to you, which can be called as:
+%[root, fx,For the following problem, consider the Taylor Series: 
+
+LaTeX: f\left(x_{i+1\:}\right)=\sum^{\infty}_{n=0}\:\frac{f^n\left(x_i\right)}{n!}h^n
+
+f(x) = 4x3 – 2
+
+xi = 2
+
+xi+1 = 4
+
+What is the true relative error associated with the estimate using the 1st order Taylor series estimate of f(xi+1) about xi? ea, iter] = bisect(func, lower_bound, upper_bound);
+
+% These variables will be checked for your final answer:
+%angle =  % the angle in degree that solves this problem
+%fx =     % the function value at your solved angle
+%ea =     % the bisection error estimate
+%iter =   % the number of bisection iterations
